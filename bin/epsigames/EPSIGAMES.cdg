@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="EPSIGAMES">
+  <ClassDiagramComponents>
+    <Class name="Administrateur" package="" visibility="public" xPosition="787.0" yPosition="152.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="DisplayDashboard" returnType="void" visibility="public"/>
+        <Method name="SearchUser" returnType="void" visibility="public"/>
+        <Method name="DeleteUser" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Utilisateur" package="" visibility="public" xPosition="437.0" yPosition="29.0">
+      <Fields>
+        <Field name="Pseudo" type="Object" visibility="private"/>
+        <Field name="CryptedPass" type="Object" visibility="private"/>
+        <Field name="LastName" type="Object" visibility="private"/>
+        <Field name="Mail" type="Object" visibility="private"/>
+        <Field name="Address" type="Object" visibility="private"/>
+        <Field name="Phone" type="Object" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+        <Field name="Platform" type="Object" visibility="private"/>
+        <Field name="FirstName" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="AddAccount" returnType="void" visibility="public"/>
+        <Method name="ModifyPass" returnType="void" visibility="public"/>
+        <Method name="ModifyPayment" returnType="void" visibility="public"/>
+        <Method name="ModifyMail" returnType="void" visibility="public"/>
+        <Method name="LoadPersonnalData" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gestion BDD" package="" visibility="public" xPosition="61.0" yPosition="23.0">
+      <Fields>
+        <Field name="Name" type="Object" visibility="private"/>
+        <Field name="Path" type="Object" visibility="private"/>
+        <Field name="Password" type="Object" visibility="private"/>
+        <Field name="Login" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Connection" returnType="void" visibility="public"/>
+        <Method name="Deconnection" returnType="void" visibility="public"/>
+        <Method name="StatCount" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Wishlist" package="" visibility="public" xPosition="579.0" yPosition="502.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="DisplayWishlist" returnType="void" visibility="public"/>
+        <Method name="DeleteAWish" returnType="void" visibility="public"/>
+        <Method name="AddWish" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FavList" package="" visibility="public" xPosition="337.0" yPosition="502.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="AddFavorites" returnType="void" visibility="public"/>
+        <Method name="DeleteFavorites" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Subscription" package="" visibility="public" xPosition="852.0" yPosition="502.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Subscribe" returnType="void" visibility="public"/>
+        <Method name="Unsubscribe" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Games" package="" visibility="public" xPosition="61.0" yPosition="274.0">
+      <Fields>
+        <Field name="Title" type="Object" visibility="private"/>
+        <Field name="Subtitle" type="Object" visibility="private"/>
+        <Field name="ProductCompany" type="Object" visibility="private"/>
+        <Field name="Description" type="Object" visibility="private"/>
+        <Field name="Genre" type="Object" visibility="private"/>
+        <Field name="Country" type="Object" visibility="private"/>
+        <Field name="YearOfRealisation" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="DisplayGameList" returnType="void" visibility="public"/>
+        <Method name="DisplayCatalog" returnType="void" visibility="public"/>
+        <Method name="SearchGame" returnType="void" visibility="public"/>
+        <Method name="CreateGame" returnType="void" visibility="public"/>
+        <Method name="ModifyGame" returnType="void" visibility="public"/>
+        <Method name="DeleteGame" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Teaser" package="" visibility="public" xPosition="1116.0" yPosition="152.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="CreateTeaser" returnType="void" visibility="public"/>
+        <Method name="ModifyTeaser" returnType="void" visibility="public"/>
+        <Method name="DeleteTeaser" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Utilisateur" target="Administrateur"/>
+    <UseRelation name="Favorites" source="Utilisateur" target="FavList" sourceCardinality="1..*" targetCardinality="1..*"/>
+    <UseRelation name="Wishes" source="Utilisateur" target="Wishlist" sourceCardinality="1..*" targetCardinality="1..*"/>
+    <UseRelation name="Connection" source="Utilisateur" target="Gestion BDD" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="Teaser" source="Administrateur" target="Teaser" sourceCardinality="1..*" targetCardinality="0..1"/>
+    <UseRelation name="Subscription" source="Utilisateur" target="Subscription" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="Connection" source="Utilisateur" target="Games" sourceCardinality="1..*" targetCardinality="1..*"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
