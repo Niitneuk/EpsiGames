@@ -5,9 +5,10 @@ public class Administrateur {
     }
 
     public void SearchUser() {
-    	//affiche certaines infos sur l'utilisateur pour pouvoir ensuite le supprimer
+    	//SELECT `NOMUSERS`,`PRENOMUSERS`,`MAILUSERS` FROM `users` WHERE `IDUSERS` = 
     }
 
     public void DeleteUser() {
+    	//DELETE FROM `users` WHERE `users`.`IDUSERS` = 
     }
 }

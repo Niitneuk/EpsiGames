@@ -15,21 +15,26 @@ public class Games {
     private Object YearOfRealisation;
 
     public void DisplayGameList() {
+    	
     }
 
     public void DisplayCatalog() {
+    	//SELECT * FROM `games`
     }
 
     public void SearchGame() {
+    	
     }
 
     public void CreateGame() {
-    	// INSERT INTO `games`(`IDGAMES`, `TITREGAMES`, `STITREGAMES`, `SOCPRODGAMES`, `DESCGAMES`, `TYPEGAMES`, `COUNTRYGAMES`, `YEARGAMES`, `IMGGAMES`, `TEASERGAMES`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8],[value-9],[value-10])
+    	// INSERT INTO `games`(`IDGAMES`, `TITREGAMES`, `STITREGAMES`, `SOCPRODGAMES`, `DESCGAMES`, `TYPEGAMES`, `COUNTRYGAMES`, `YEARGAMES`, `IMGGAMES`, `TEASERGAMES`) VALUES ('','','','','','','','','','')
     }
 
     public void ModifyGame() {
+    	// UPDATE `games` SET `IDGAMES`='',`TITREGAMES`='',`STITREGAMES`='',`SOCPRODGAMES`='',`DESCGAMES`='',`TYPEGAMES`='',`COUNTRYGAMES`='',`YEARGAMES`='',`IMGGAMES`='',`TEASERGAMES`='' WHERE `IDGAMES` =
     }
 
     public void DeleteGame() {
+    	// DELETE FROM `games` WHERE `IDGAMES` =
     }
 }
