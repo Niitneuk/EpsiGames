@@ -17,6 +17,8 @@ public class Utilisateur extends Administrateur {
     private Object Platform;
 
     private Object FirstName;
+    
+    private Object FormofPayment;
 
     public void AddAccount() {
     	// compte bancaire
@@ -27,7 +29,7 @@ public class Utilisateur extends Administrateur {
     }
 
     public void ModifyPayment() {
-    	//Rajouter colonne moyen de paiement dans table user
+    	// UPDATE `users` SET `FormofPayment`='' WHERE `IDUSERS` =
     }
 
     public void ModifyMail() {
